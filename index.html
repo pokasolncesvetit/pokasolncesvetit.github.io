@@ -7,6 +7,626 @@
 
   <h1>Заголовок страницы</h1>
   <p>Основной текст.</p>
+  
+   <p>ОЗаписи по VBA
+Приветствую тебя на моем сайте посвященному VBA, а точнее VBA под EXCEL.
+
+На текущий момент информация является моим черновиком, куда я вносил самые важные примеры команд и описания по взаимодействию применяемые на практике. Надеюсь тебе они тоже будут полезны.
+
+ 
+
+
+
+Sub x()
+
+End - выход внутри макроса
+
+Exit Sub - тоже выход внутри программы
+
+Ctrl+"пробел" - предлагает варианты слов
+
+ActiveWorkbook.FULname - путь к рабочей книге
+
+.copy destination:=Applic...cells(x,y) - вставка без буфера обмена(присвоение)
+
+End sub.
+
+.value свойство объекты - значение из объекта
+
+.byvalue - по значению
+
+Ctrl+G Thisworkbook.close - вызвать окно отладки и закрыть рабочую книгу. Так же можно проверить кусочек макроса без определения переменных и т.д. range("а1") выведет результат в следующей строке окна отладки.
+
+Application - сам excel
+
+
+
+With a.b
+
+.c
+
+.d.cells и т.д
+
+End With
+
+
+
+IsNumeric (q) - (true/folse) проверка на число
+
+IsError (q) - (true/folse) проверка на ошибку
+
+IsMissing(q) - (true/folse) проверка на пустоту, если пусто - true
+
+
+
+Range("D2").FormulaLocal="Целое(А2)" вставляет в д2 формулу
+
+Range("D3").Clear очистить
+
+.ClearContent очистить только содержимое
+
+Х=1 : У=2 - : позволяет записывать комманды в 1 строке
+
+( _) - позволяет продолжить написание кода одной инструкции на следующей строке
+
+
+
+ReDim MyArray (1 to 6) - перезадаёт тип переменной или размерность массива. Данные удаляются.
+
+
+
+ReDim Preserve MyArray (1 to 10)- перезадаёт тип переменной или размерность массива. Данные не удаляются.
+
+
+
+MyArray () - создаёт пустой массив
+
+
+
+LBound (MyArray) - номер первого элемента массива
+
+
+
+UBound (MyArray) - номер последнего элемента массива
+
+Call Sab Q1(MyArray) - передаёт весь массив
+
+
+
+If UCase(MyArray(i)) >UCase (MyArray(j)) then... - UCase преобразует текст в верхний регистр
+
+
+
+Option Compare Text - Добавляется в начало модуля. В этом случае VBA выполняет сравнение строк на основе нечувствительных к регистру правил сортировки. Другими словами, А считается тем же, что и а.
+
+
+
+Set MyCell = Worksheets ( "Лист1" ) . Range ( "A1" ) - set присваевает переменной сам объект
+
+
+
+Application.WorksheetFunction - Функции рабочего листа
+
+
+
+Application.DisplayAlerts =False
+
+Sheets("Имя листа").Copy
+
+ActiveWorkbook.SaveAs X&Y
+
+ActiveWorkbook.close
+
+Application.DisplayAlerts = True
+
+-Сохранение рабочего листа"Имя листа" по пути Х с названием У и последующее закрытие нового листа. Отключаем предупреждающее окно од сохранения, а после включаем заново. Иначе будет возникать диалоговое окно.
+
+
+
+Static x as integet - статическая переменная не обнуляется при завершении программы
+
+
+
+Static sub/function переменные не обнуляются при завершении
+
+
+
+ActiveCell.Offset(1,0).select - смещение по координатам
+
+
+
+GoSub Метка1 - перенос к метке 1
+
+Метка1: -сама метка, обязательно с двоеточием
+
+Return - вернуться к строке, следующей за GoSub метка1
+
+
+
+A=Range("a1:b1")
+
+A.Resize(1,1) - расширить диапазон до а2 б2 / A.Resize(1,1).select
+
+
+
+Worksheets.Count - номер последнего листа
+
+.Count - свойство коллекции, отображающе номер последнего элемента
+
+
+
+*range(cells(1,1),cells(2,2)).copy _ *range(cells(3,3),cells(4,4))
+
+Вариант копирования "на прямую"
+
+
+
+F2 - объектный справочник
+
+
+
+.... Comment Is Nothing - объект равен ""
+
+Empty-""
+
+
+
+Создание пользовательского класса
+
+Класс создаётся только в модуле
+
+
+
+Public Type Customerlnfo
+
+Company As S tring
+
+Contact As S tring
+
+RegionCode As Long
+
+Sales As Double
+
+End Type
+
+
+
+Sub Q123()
+
+Dim Customers (1 То 100) As Customerlnfo
+
+
+
+Customers(1).Company="AcmeTools"
+
+Customers(1).Contact= "TimRobertson"
+
+Customers(1).RegionCode=3 Customers(1).Sales=150674.98
+
+
+
+End Sub
+
+
+
+Чтобы получить список функций VBA при написании кода, введите VBA и точку. После этого VBE отобразит список всех вложенных в объект VBA объектов, включая функции. Функции обозначаются зеленым значком.
+
+Чтобы использовать функцию Excel в операторе VBA, перед названием функции вве­ дите следующее выражение:
+
+Application.WorksheetFunction
+
+Пример
+
+WorksheetFunction.IsNumber(X)
+
+
+
+Конструкция For Each
+
+Sub CountSheets()
+
+Dim Item as Worksheet
+
+For Each Item In ActiveWorkbook.Worksheets
+
+MsgBox Item.Name
+
+Next Item
+
+End Sub
+
+
+
+Exit For - выход из цикла For
+
+
+
+Пример конструкции GoTo
+
+Sub GoToDemo()
+
+UserName = InputBox ("Введите свое имя :")
+
+If UserName <> "Ховард" Then GoTo WrongName
+
+MsgBox ("Привет, Х о в а р д ...")
+
+Exit Sub
+
+WrongName:
+
+MsgBox "Извините, эту процедуру может запускать только Ховард."
+
+End Sub
+
+
+
+Пример конструкции If Then ElseIf Else End If
+
+Обязаьельные только If Then End If
+
+Sub QWE()
+
+Dim X As Integer
+
+X = InputBox("")
+
+If X < 1 Then
+
+MsgBox ("<1")
+
+ElseIf X < 2 Then
+
+MsgBox ("<2")
+
+ElseIf X < 3 Then
+
+MsgBox ("3")
+
+Else
+
+MsgBox ("ENOT")
+
+End If
+
+End Sub
+
+
+
+Пример конструкции Case
+
+В операторе Case можно использовать запятую, разделяющую несколько значений для одного варианта.
+
+Если вы используете вкаждом случае Case только одну инструкцию (как в предыдущем примере), то можете поместить ее в той же строке, что и ключевое слово Case (но не забудьте о символе раз­ деления операторов в VBА — двоеточие :)
+
+Возможно в конструкции использовать вложенный select case после case верхнего уровня, но его нужно будет закрыть своим end select.
+
+Sub G reetM e()
+
+Dim Msg As S trin g
+
+Select Case Time
+
+Case Is < 0.5
+
+MsgBox = "Доброе утро": MsgBox = "Доброе утро"
+
+Case is <0.4
+
+MsgBox ="Енот"
+
+Case Is 0.4, 0.3, 0.2
+
+MsgBox = "Енот2"
+
+Case 0.5 To 0.75
+
+Msg = "Добрый день"
+
+Case Else
+
+Msg = "Добрый вечер"
+
+End Select
+
+MsgBox Msg
+
+End Sub
+
+
+
+Пример цикла for i = 9 to 6 Step -1 (любое положительное и отрицательное)
+
+
+
+Next i
+
+Или
+
+Sub SumOddSquareRoots()
+
+Dim Sum As Double
+
+Dim Count As Integer
+
+Sum = 0
+
+For Count = 1 To 100 Step 2
+
+Sum = Sum + Sqr(Count)
+
+Next Count
+
+MsgBox Sum
+
+End Sub
+
+
+
+Пример метода Find для поиска максимального значения в столбце.
+
+Range("А :А").Find (Application.WorksheetFunction.Max _ (Range("A :A"))).Activate
+
+
+
+Application.ScreenUpdeting = True/False
+
+Включение и отключение обновления Экрана
+
+
+
+Application.run - позволяет вызвать макрос, аналог Call
+
+
+
+Sub q1(ByVal x as integer)
+
+If x> then
+
+MsgBox ("x>5")
+
+End If
+
+End Sub
+
+
+
+Sub q2 ()
+
+Dim t as integer
+
+t = InputBox ("")
+
+Application.run "module1.q1", 1
+
+Application.run "ЭтаКнига.q1", 1
+
+Application.run "Книга321.xlsm!ЭтаКнига.q1", 1
+
+End Sub
+
+Application.Run " 'budget macros.xlsm '! q1"
+
+Call module1.("название макроса")- ссылка на программу в другом модуле, если имеются одинаковые названия. Вызвать макрос типа private можно только из его модуля или листа, или книге (объекта где он написан)
+
+
+
+Вызов процедуры из другой рабочей книги
+
+В некоторых случаях необходимо, чтобы процедура выполняла иную процедуру, опреде­ ленную в другой рабочей книге. Для этого существует два варианта: установить ссылку на другуюрабочую книгу или использовать метод Run и явно указать название рабочей книги.
+
+Чтобы добавить ссылку на другую рабочую книгу, выберите в VBE команду Tooted References (Сервис=>Ссылки). Будет отображено диалоговое окно References (Ссылки), в котором перечислены все существующие ссылки во всех от­ крытых рабочих книгах. Выставьте флажок, соответствующий той рабочей книге, на ко­ торую вы планируете добавить ссылку, и щелкните на кнопке ОК. После установки ссылки процедуры в этой рабочей книге можно вызывать так, будто они находятся в те­ кущей рабочей книге, к которой принадлежит вызывающая процедура.
+
+Рабочая книга, на которую ссылаются, не обязательно должна быть открыта — она рас­ сматривается как отдельная библиотека объектов. Используйте кнопку Browse (Просмотр) вдиалоговом окне References, чтобы установить ссылку на закрытую рабочую книгу.
+
+
+
+Debug.print x - отобразть значение переменной x в окне отладки
+
+
+
+Sub q1(ByVal x as integer) - ByVal позволяет передавать переменную по значению, т.е. мы будем работать с копией переменной, и не сможем её изменить в исходной программе. Если не указать ByVal, то переменная передаётся по ссылке, и любые ищменения отразятся в исходной программе, или если переменной присвоен объект, то и в объекте
+
+
+
+Перехват ошибок
+
+1) переход к метке FOX при возникновении ошибки
+
+Sub Test()
+
+On Error GoTo FOX
+
+Worksheets(2).Select
+
+Exit Sub
+
+FOX:
+
+MsgBox ("Yes, i am fox")
+
+End Sub
+
+2) игнорирование ошибки. В случе её возникновения, код продолжает выполняться дальше.
+
+Sub Test2()
+
+On Error Resume Next
+
+Worksheets(2).Select
+
+End Sub
+
+
+
+On Error Resume Next
+
+SheetCount = ActiveWorkbook.Sheets.Count If Err <> 0 Then Exit Sub - Если Err не равно нулю, это означает, что произошла ошибка. Следовательно, процедура заканчивается.
+
+
+
+If ActiveWorkbook Is Nothing Then Exit Sub - Если активная книга свёрнута(нет активной книги), то выход из макроса.
+
+
+
+'Проверка защиты структуры рабочей книги
+
+If ActiveWorkbook.ProtectStructure Then MsgBox ActiveWorkbook.Name & "защищена.", _
+
+vbCritical, "Сортировка листов невозможна."
+
+Exit Sub
+
+End If
+
+
+
+Set OldActive=ActiveSheet - присваивает переменной активный рабочий лист
+
+OldActive.Activate - активизирует рабочий лист, который был изначально активным
+
+
+
+X =Len("Fox") 'результат =3
+
+Len - количество символов
+
+
+
+A Like "[ABC]" - Like ищет А в диапозоне, в данном случае True.
+
+Вариантов много, ищи в справке.
+
+
+
+Mid(строка,начальная позиция, длина) - аналог пстр
+
+
+
+Sub Test1()
+
+Dim x As Variant
+
+x = InStr("На горе Фернандо-По, где гуляет Гиппо-по", "Фернандо")
+
+MsgBox x
+
+'Здесь x будет равен 9
+
+End Sub
+
+
+
+Function RemoveVowels(qwe) As String
+
+'Удаляет все гласные буквы из текста
+
+Dim i As Long
+
+RemoveVowels = ""
+
+For i = 1 To Len(qwe)
+
+If Not UCase(Mid(qwe, i, 1)) Like "[AEIOUАЕОУЫЭЮЯ]" Then
+
+RemoveVowels = RemoveVowels & Mid(qwe, i, 1)
+
+End If
+
+Next i
+
+End Function
+
+
+
+Total = RemoveVowels (X) - вызов функции и передача аргумента Х. Функцию можно вызвать и без "тотал".
+
+
+
+Asc (L) - возвращает номер символа
+
+Chr (23) - возвращает символ по номеру
+
+Application.Path - адрес к папке, где установлен Excel
+
+
+
+Rnd() - возвращает случайное число между (1;0)
+
+
+
+MsgBox "Ваше имя" &User() - пример вызова функции в макросе
+
+
+
+Application.Volatile True - указывается в теле функции для более частого пересчёта
+
+
+
+Select Case a
+
+Case 0 To 99
+
+MsgBox ("DA")
+
+End Select - проверка на вхождение в диапазон 0 to 99
+
+
+
+Function User(Optional Uppercase As Variant)
+
+If IsMissing(Uppercase) Then Uppercase = False
+
+User = Application.UserName
+
+If Uppercase Then User = UCase(User)
+
+End Function
+
+Optional Uppercase As Variant - optional указывается перед необязательным аргументом, необязательный аргумент всегда последний
+
+
+
+Function User(Optional Uppercase As Variant = true(или любое другое значение)) - = true это значение, которое присваевается переменной, по умолчанию, если она не определена (пуста)
+
+
+
+Function MonthName()
+
+MonthName = Array("Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек")
+
+End Function
+
+- Функция создаёт горизонтальный массив, вводится ctrl + shift + enter
+
+
+
+(A+B) mod C - mod остаток от деления А+В на С
+
+
+
+Чтобы получить ошибку #Н/Д в пользовательской функции, примените следующий оператор: Х = CVErr(xlErrNA)
+
+xlErrDivO (для ошибки #ДЕЛ/ 0 !);
+
+xlErrNA (для ошибки #Н/Д);
+
+xlErrName (для ошибки #ИМЯ?);
+
+xlErrNull (для ошибки #ПУСТО !);
+
+xlErrNum (для ошибки #ЧИСЛО !);
+
+xlErrRef (для ошибки #ССЫЛ !);
+
+xlErrValue (для ошибки #ЗНАЧ !).
+
+ 
+
+Вы можете присоединиться к нашей группе ВКонтакте: https://vk.com/vba_for_excel 
+
+Для индексации: vba vba excel vba ячейка vba строки vba массивы vba функции 
+vk.com/vba_for_excel</p>
 
  </body>
 </html>
