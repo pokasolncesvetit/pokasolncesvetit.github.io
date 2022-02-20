@@ -9,621 +9,621 @@
   <p>Приветствую тебя на моем сайте посвященному VBA, а точнее VBA под EXCEL.</p>
   
    <p>
-На текущий момент информация является моим черновиком, куда я вносил самые важные примеры команд и описания по взаимодействию применяемые на практике. Надеюсь тебе они тоже будут полезны.
+На текущий момент информация является моим черновиком, куда я вносил самые важные примеры команд и описания по взаимодействию применяемые на практике. Надеюсь тебе они тоже будут полезны.<br>
 
  
 
 
 
-Sub x()
+Sub x()<br>
 
-End - выход внутри макроса
+End - выход внутри макроса<br>
 
-Exit Sub - тоже выход внутри программы
+Exit Sub - тоже выход внутри программы<br>
 
-Ctrl+"пробел" - предлагает варианты слов
+Ctrl+"пробел" - предлагает варианты слов<br>
 
-ActiveWorkbook.FULname - путь к рабочей книге
+ActiveWorkbook.FULname - путь к рабочей книге<br>
 
-.copy destination:=Applic...cells(x,y) - вставка без буфера обмена(присвоение)
+.copy destination:=Applic...cells(x,y) - вставка без буфера обмена(присвоение)<br>
 
-End sub.
+End sub.<br>
 
-.value свойство объекты - значение из объекта
+.value свойство объекты - значение из объекта<br>
 
-.byvalue - по значению
+.byvalue - по значению<br>
 
-Ctrl+G Thisworkbook.close - вызвать окно отладки и закрыть рабочую книгу. Так же можно проверить кусочек макроса без определения переменных и т.д. range("а1") выведет результат в следующей строке окна отладки.
+Ctrl+G Thisworkbook.close - вызвать окно отладки и закрыть рабочую книгу. Так же можно проверить кусочек макроса без определения переменных и т.д. range("а1") выведет результат в следующей строке окна отладки.<br>
 
-Application - сам excel
+Application - сам excel<br>
 
 
 
-With a.b
+With a.b<br>
 
-.c
+.c<br>
 
-.d.cells и т.д
+.d.cells и т.д<br>
 
-End With
+End With<br>
 
 
 
-IsNumeric (q) - (true/folse) проверка на число
+IsNumeric (q) - (true/folse) проверка на число<br>
 
-IsError (q) - (true/folse) проверка на ошибку
+IsError (q) - (true/folse) проверка на ошибку<br>
 
-IsMissing(q) - (true/folse) проверка на пустоту, если пусто - true
+IsMissing(q) - (true/folse) проверка на пустоту, если пусто - true<br>
 
 
 
-Range("D2").FormulaLocal="Целое(А2)" вставляет в д2 формулу
+Range("D2").FormulaLocal="Целое(А2)" вставляет в д2 формулу<br>
 
-Range("D3").Clear очистить
+Range("D3").Clear очистить<br>
 
-.ClearContent очистить только содержимое
+.ClearContent очистить только содержимое<br>
 
-Х=1 : У=2 - : позволяет записывать комманды в 1 строке
+Х=1 : У=2 - : позволяет записывать комманды в 1 строке<br>
 
-( _) - позволяет продолжить написание кода одной инструкции на следующей строке
+( _) - позволяет продолжить написание кода одной инструкции на следующей строке<br>
 
 
 
-ReDim MyArray (1 to 6) - перезадаёт тип переменной или размерность массива. Данные удаляются.
+ReDim MyArray (1 to 6) - перезадаёт тип переменной или размерность массива. Данные удаляются.<br>
 
 
 
-ReDim Preserve MyArray (1 to 10)- перезадаёт тип переменной или размерность массива. Данные не удаляются.
+ReDim Preserve MyArray (1 to 10)- перезадаёт тип переменной или размерность массива. Данные не удаляются.<br>
 
 
 
-MyArray () - создаёт пустой массив
+MyArray () - создаёт пустой массив<br>
 
 
 
-LBound (MyArray) - номер первого элемента массива
+LBound (MyArray) - номер первого элемента массива<br>
 
 
 
-UBound (MyArray) - номер последнего элемента массива
+UBound (MyArray) - номер последнего элемента массива<br>
 
-Call Sab Q1(MyArray) - передаёт весь массив
+Call Sab Q1(MyArray) - передаёт весь массив<br>
 
 
 
-If UCase(MyArray(i)) >UCase (MyArray(j)) then... - UCase преобразует текст в верхний регистр
+If UCase(MyArray(i)) >UCase (MyArray(j)) then... - UCase преобразует текст в верхний регистр<br>
 
 
 
-Option Compare Text - Добавляется в начало модуля. В этом случае VBA выполняет сравнение строк на основе нечувствительных к регистру правил сортировки. Другими словами, А считается тем же, что и а.
+Option Compare Text - Добавляется в начало модуля. В этом случае VBA выполняет сравнение строк на основе нечувствительных к регистру правил сортировки. Другими словами, А считается тем же, что и а.<br>
 
 
 
-Set MyCell = Worksheets ( "Лист1" ) . Range ( "A1" ) - set присваевает переменной сам объект
+Set MyCell = Worksheets ( "Лист1" ) . Range ( "A1" ) - set присваевает переменной сам объект<br>
 
 
 
-Application.WorksheetFunction - Функции рабочего листа
+Application.WorksheetFunction - Функции рабочего листа<br>
 
 
 
-Application.DisplayAlerts =False
+Application.DisplayAlerts =False<br>
 
-Sheets("Имя листа").Copy
+Sheets("Имя листа").Copy<br>
 
-ActiveWorkbook.SaveAs X&Y
+ActiveWorkbook.SaveAs X&Y<br>
 
-ActiveWorkbook.close
+ActiveWorkbook.close<br>
 
-Application.DisplayAlerts = True
+Application.DisplayAlerts = True<br>
 
--Сохранение рабочего листа"Имя листа" по пути Х с названием У и последующее закрытие нового листа. Отключаем предупреждающее окно од сохранения, а после включаем заново. Иначе будет возникать диалоговое окно.
+-Сохранение рабочего листа"Имя листа" по пути Х с названием У и последующее закрытие нового листа. Отключаем предупреждающее окно од сохранения, а после включаем заново. Иначе будет возникать диалоговое окно.<br>
 
 
 
-Static x as integet - статическая переменная не обнуляется при завершении программы
+Static x as integet - статическая переменная не обнуляется при завершении программы<br>
 
 
 
-Static sub/function переменные не обнуляются при завершении
+Static sub/function переменные не обнуляются при завершении<br>
 
 
 
-ActiveCell.Offset(1,0).select - смещение по координатам
+ActiveCell.Offset(1,0).select - смещение по координатам<br>
 
 
 
-GoSub Метка1 - перенос к метке 1
+GoSub Метка1 - перенос к метке 1<br>
 
-Метка1: -сама метка, обязательно с двоеточием
+Метка1: -сама метка, обязательно с двоеточием<br>
 
-Return - вернуться к строке, следующей за GoSub метка1
+Return - вернуться к строке, следующей за GoSub метка1<br>
 
 
 
-A=Range("a1:b1")
+A=Range("a1:b1")<br>
 
-A.Resize(1,1) - расширить диапазон до а2 б2 / A.Resize(1,1).select
+A.Resize(1,1) - расширить диапазон до а2 б2 / A.Resize(1,1).select<br>
 
 
 
-Worksheets.Count - номер последнего листа
+Worksheets.Count - номер последнего листа<br>
 
-.Count - свойство коллекции, отображающе номер последнего элемента
+.Count - свойство коллекции, отображающе номер последнего элемента<br>
 
 
 
-*range(cells(1,1),cells(2,2)).copy _ *range(cells(3,3),cells(4,4))
+*range(cells(1,1),cells(2,2)).copy _ *range(cells(3,3),cells(4,4))<br>
 
-Вариант копирования "на прямую"
+Вариант копирования "на прямую"<br>
 
 
 
-F2 - объектный справочник
+F2 - объектный справочник<br>
 
 
 
-.... Comment Is Nothing - объект равен ""
+.... Comment Is Nothing - объект равен ""<br>
 
-Empty-""
+Empty-""<br>
 
 
 
-Создание пользовательского класса
+Создание пользовательского класса<br>
 
-Класс создаётся только в модуле
+Класс создаётся только в модуле<br>
 
 
 
-Public Type Customerlnfo
+Public Type Customerlnfo<br>
 
-Company As S tring
+Company As S tring<br>
 
-Contact As S tring
+Contact As S tring<br>
 
-RegionCode As Long
+RegionCode As Long<br>
 
-Sales As Double
+Sales As Double<br>
 
-End Type
+End Type<br>
 
 
 
-Sub Q123()
+Sub Q123()<br>
 
-Dim Customers (1 То 100) As Customerlnfo
+Dim Customers (1 То 100) As Customerlnfo<br>
 
 
 
-Customers(1).Company="AcmeTools"
+Customers(1).Company="AcmeTools"<br>
 
-Customers(1).Contact= "TimRobertson"
+Customers(1).Contact= "TimRobertson"<br>
 
-Customers(1).RegionCode=3 Customers(1).Sales=150674.98
+Customers(1).RegionCode=3 Customers(1).Sales=150674.98<br>
 
 
 
-End Sub
+End Sub<br>
 
 
 
-Чтобы получить список функций VBA при написании кода, введите VBA и точку. После этого VBE отобразит список всех вложенных в объект VBA объектов, включая функции. Функции обозначаются зеленым значком.
+Чтобы получить список функций VBA при написании кода, введите VBA и точку. После этого VBE отобразит список всех вложенных в объект VBA объектов, включая функции. Функции обозначаются зеленым значком.<br>
 
-Чтобы использовать функцию Excel в операторе VBA, перед названием функции вве­ дите следующее выражение:
+Чтобы использовать функцию Excel в операторе VBA, перед названием функции введите следующее выражение:<br>
 
-Application.WorksheetFunction
+Application.WorksheetFunction<br>
 
-Пример
+Пример<br>
 
-WorksheetFunction.IsNumber(X)
+WorksheetFunction.IsNumber(X)<br>
 
 
 
-Конструкция For Each
+Конструкция For Each<br>
 
-Sub CountSheets()
+Sub CountSheets()<br>
 
-Dim Item as Worksheet
+Dim Item as Worksheet<br>
 
-For Each Item In ActiveWorkbook.Worksheets
+For Each Item In ActiveWorkbook.Worksheets<br>
 
-MsgBox Item.Name
+MsgBox Item.Name<br>
 
-Next Item
+Next Item<br>
 
-End Sub
+End Sub<br>
 
 
 
-Exit For - выход из цикла For
+Exit For - выход из цикла For<br>
 
 
 
-Пример конструкции GoTo
+Пример конструкции GoTo<br>
 
-Sub GoToDemo()
+Sub GoToDemo()<br>
 
-UserName = InputBox ("Введите свое имя :")
+UserName = InputBox ("Введите свое имя :")<br>
 
-If UserName <> "Ховард" Then GoTo WrongName
+If UserName <> "Ховард" Then GoTo WrongName<br>
 
-MsgBox ("Привет, Х о в а р д ...")
+MsgBox ("Привет, Х о в а р д ...")<br>
 
-Exit Sub
+Exit Sub<br>
 
-WrongName:
+WrongName:<br>
 
-MsgBox "Извините, эту процедуру может запускать только Ховард."
+MsgBox "Извините, эту процедуру может запускать только Ховард."<br>
 
-End Sub
+End Sub<br>
 
 
 
-Пример конструкции If Then ElseIf Else End If
+Пример конструкции If Then ElseIf Else End If<br>
 
-Обязаьельные только If Then End If
+Обязаьельные только If Then End If<br>
 
-Sub QWE()
+Sub QWE()<br>
 
-Dim X As Integer
+Dim X As Integer<br>
 
-X = InputBox("")
+X = InputBox("")<br>
 
-If X < 1 Then
+If X < 1 Then<br>
 
-MsgBox ("<1")
+MsgBox ("<1")<br>
 
-ElseIf X < 2 Then
+ElseIf X < 2 Then<br>
 
-MsgBox ("<2")
+MsgBox ("<2")<br>
 
-ElseIf X < 3 Then
+ElseIf X < 3 Then<br>
 
-MsgBox ("3")
+MsgBox ("3")<br>
 
-Else
+Else<br>
 
-MsgBox ("ENOT")
+MsgBox ("ENOT")<br>
 
-End If
+End If<br>
 
-End Sub
+End Sub<br>
 
 
 
-Пример конструкции Case
+Пример конструкции Case<br>
 
-В операторе Case можно использовать запятую, разделяющую несколько значений для одного варианта.
+В операторе Case можно использовать запятую, разделяющую несколько значений для одного варианта.<br>
 
-Если вы используете вкаждом случае Case только одну инструкцию (как в предыдущем примере), то можете поместить ее в той же строке, что и ключевое слово Case (но не забудьте о символе раз­ деления операторов в VBА — двоеточие :)
+Если вы используете вкаждом случае Case только одну инструкцию (как в предыдущем примере), то можете поместить ее в той же строке, что и ключевое слово Case (но не забудьте о символе раз­ деления операторов в VBА — двоеточие :)<br>
 
-Возможно в конструкции использовать вложенный select case после case верхнего уровня, но его нужно будет закрыть своим end select.
+Возможно в конструкции использовать вложенный select case после case верхнего уровня, но его нужно будет закрыть своим end select.<br>
 
-Sub G reetM e()
+Sub G reetM e()<br>
 
-Dim Msg As S trin g
+Dim Msg As S trin g<br>
 
-Select Case Time
+Select Case Time<br>
 
-Case Is < 0.5
+Case Is < 0.5<br>
 
-MsgBox = "Доброе утро": MsgBox = "Доброе утро"
+MsgBox = "Доброе утро": MsgBox = "Доброе утро"<br>
 
-Case is <0.4
+Case is <0.4<br>
 
-MsgBox ="Енот"
+MsgBox ="Енот"<br>
 
-Case Is 0.4, 0.3, 0.2
+Case Is 0.4, 0.3, 0.2<br>
 
-MsgBox = "Енот2"
+MsgBox = "Енот2"<br>
 
-Case 0.5 To 0.75
+Case 0.5 To 0.75<br>
 
-Msg = "Добрый день"
+Msg = "Добрый день"<br>
 
-Case Else
+Case Else<br>
 
-Msg = "Добрый вечер"
+Msg = "Добрый вечер"<br>
 
-End Select
+End Select<br>
 
-MsgBox Msg
+MsgBox Msg<br>
 
-End Sub
+End Sub<br>
 
 
 
-Пример цикла for i = 9 to 6 Step -1 (любое положительное и отрицательное)
+Пример цикла for i = 9 to 6 Step -1 (любое положительное и отрицательное)<br>
 
 
 
-Next i
+Next i<br>
 
-Или
+Или<br>
 
-Sub SumOddSquareRoots()
+Sub SumOddSquareRoots()<br>
 
-Dim Sum As Double
+Dim Sum As Double<br>
 
-Dim Count As Integer
+Dim Count As Integer<br>
 
-Sum = 0
+Sum = 0<br>
 
-For Count = 1 To 100 Step 2
+For Count = 1 To 100 Step 2<br>
 
-Sum = Sum + Sqr(Count)
+Sum = Sum + Sqr(Count)<br>
 
-Next Count
+Next Count<br>
 
-MsgBox Sum
+MsgBox Sum<br>
 
-End Sub
+End Sub<br>
 
 
 
-Пример метода Find для поиска максимального значения в столбце.
+Пример метода Find для поиска максимального значения в столбце.<br>
 
-Range("А :А").Find (Application.WorksheetFunction.Max _ (Range("A :A"))).Activate
+Range("А :А").Find (Application.WorksheetFunction.Max _ (Range("A :A"))).Activate<br>
 
 
 
-Application.ScreenUpdeting = True/False
+Application.ScreenUpdeting = True/False<br>
 
-Включение и отключение обновления Экрана
+Включение и отключение обновления Экрана<br>
 
 
 
-Application.run - позволяет вызвать макрос, аналог Call
+Application.run - позволяет вызвать макрос, аналог Call<br>
 
 
 
-Sub q1(ByVal x as integer)
+Sub q1(ByVal x as integer)<br>
 
-If x> then
+If x> then<br>
 
-MsgBox ("x>5")
+MsgBox ("x>5")<br>
 
-End If
+End If<br>
 
-End Sub
+End Sub<br>
 
 
 
-Sub q2 ()
+Sub q2 ()<br>
 
-Dim t as integer
+Dim t as integer<br>
 
-t = InputBox ("")
+t = InputBox ("")<br>
 
-Application.run "module1.q1", 1
+Application.run "module1.q1", 1<br>
 
-Application.run "ЭтаКнига.q1", 1
+Application.run "ЭтаКнига.q1", 1<br>
 
-Application.run "Книга321.xlsm!ЭтаКнига.q1", 1
+Application.run "Книга321.xlsm!ЭтаКнига.q1", 1<br>
 
-End Sub
+End Sub<br>
 
-Application.Run " 'budget macros.xlsm '! q1"
+Application.Run " 'budget macros.xlsm '! q1"<br>
 
-Call module1.("название макроса")- ссылка на программу в другом модуле, если имеются одинаковые названия. Вызвать макрос типа private можно только из его модуля или листа, или книге (объекта где он написан)
+Call module1.("название макроса")- ссылка на программу в другом модуле, если имеются одинаковые названия. Вызвать макрос типа private можно только из его модуля или листа, или книге (объекта где он написан)<br>
 
 
 
-Вызов процедуры из другой рабочей книги
+Вызов процедуры из другой рабочей книги<br>
 
-В некоторых случаях необходимо, чтобы процедура выполняла иную процедуру, опреде­ ленную в другой рабочей книге. Для этого существует два варианта: установить ссылку на другуюрабочую книгу или использовать метод Run и явно указать название рабочей книги.
+В некоторых случаях необходимо, чтобы процедура выполняла иную процедуру, определенную в другой рабочей книге. Для этого существует два варианта: установить ссылку на другуюрабочую книгу или использовать метод Run и явно указать название рабочей книги.<br>
 
-Чтобы добавить ссылку на другую рабочую книгу, выберите в VBE команду Tooted References (Сервис=>Ссылки). Будет отображено диалоговое окно References (Ссылки), в котором перечислены все существующие ссылки во всех от­ крытых рабочих книгах. Выставьте флажок, соответствующий той рабочей книге, на ко­ торую вы планируете добавить ссылку, и щелкните на кнопке ОК. После установки ссылки процедуры в этой рабочей книге можно вызывать так, будто они находятся в те­ кущей рабочей книге, к которой принадлежит вызывающая процедура.
+Чтобы добавить ссылку на другую рабочую книгу, выберите в VBE команду Tooted References (Сервис=>Ссылки). Будет отображено диалоговое окно References (Ссылки), в котором перечислены все существующие ссылки во всех открытых рабочих книгах. Выставьте флажок, соответствующий той рабочей книге, на которую вы планируете добавить ссылку, и щелкните на кнопке ОК. После установки ссылки процедуры в этой рабочей книге можно вызывать так, будто они находятся в текущей рабочей книге, к которой принадлежит вызывающая процедура.<br>
 
-Рабочая книга, на которую ссылаются, не обязательно должна быть открыта — она рас­ сматривается как отдельная библиотека объектов. Используйте кнопку Browse (Просмотр) вдиалоговом окне References, чтобы установить ссылку на закрытую рабочую книгу.
+Рабочая книга, на которую ссылаются, не обязательно должна быть открыта — она рассматривается как отдельная библиотека объектов. Используйте кнопку Browse (Просмотр) вдиалоговом окне References, чтобы установить ссылку на закрытую рабочую книгу.<br>
 
 
 
-Debug.print x - отобразть значение переменной x в окне отладки
+Debug.print x - отобразть значение переменной x в окне отладки<br>
 
 
 
-Sub q1(ByVal x as integer) - ByVal позволяет передавать переменную по значению, т.е. мы будем работать с копией переменной, и не сможем её изменить в исходной программе. Если не указать ByVal, то переменная передаётся по ссылке, и любые ищменения отразятся в исходной программе, или если переменной присвоен объект, то и в объекте
+Sub q1(ByVal x as integer) - ByVal позволяет передавать переменную по значению, т.е. мы будем работать с копией переменной, и не сможем её изменить в исходной программе. Если не указать ByVal, то переменная передаётся по ссылке, и любые ищменения отразятся в исходной программе, или если переменной присвоен объект, то и в объекте<br>
 
 
 
-Перехват ошибок
+Перехват ошибок<br>
 
-1) переход к метке FOX при возникновении ошибки
+1) переход к метке FOX при возникновении ошибки<br>
 
-Sub Test()
+Sub Test()<br>
 
-On Error GoTo FOX
+On Error GoTo FOX<br>
 
-Worksheets(2).Select
+Worksheets(2).Select<br>
 
-Exit Sub
+Exit Sub<br>
 
-FOX:
+FOX:<br>
 
-MsgBox ("Yes, i am fox")
+MsgBox ("Yes, i am fox")<br>
 
-End Sub
+End Sub<br>
 
-2) игнорирование ошибки. В случе её возникновения, код продолжает выполняться дальше.
+2) игнорирование ошибки. В случе её возникновения, код продолжает выполняться дальше.<br>
 
-Sub Test2()
+Sub Test2()<br>
 
-On Error Resume Next
+On Error Resume Next<br>
 
-Worksheets(2).Select
+Worksheets(2).Select<br>
 
-End Sub
+End Sub<br>
 
 
 
-On Error Resume Next
+On Error Resume Next<br>
 
-SheetCount = ActiveWorkbook.Sheets.Count If Err <> 0 Then Exit Sub - Если Err не равно нулю, это означает, что произошла ошибка. Следовательно, процедура заканчивается.
+SheetCount = ActiveWorkbook.Sheets.Count If Err <> 0 Then Exit Sub - Если Err не равно нулю, это означает, что произошла ошибка. Следовательно, процедура заканчивается.<br>
 
 
 
-If ActiveWorkbook Is Nothing Then Exit Sub - Если активная книга свёрнута(нет активной книги), то выход из макроса.
+If ActiveWorkbook Is Nothing Then Exit Sub - Если активная книга свёрнута(нет активной книги), то выход из макроса.<br>
 
 
 
-'Проверка защиты структуры рабочей книги
+'Проверка защиты структуры рабочей книги<br>
 
-If ActiveWorkbook.ProtectStructure Then MsgBox ActiveWorkbook.Name & "защищена.", _
+If ActiveWorkbook.ProtectStructure Then MsgBox ActiveWorkbook.Name & "защищена.", _<br>
 
-vbCritical, "Сортировка листов невозможна."
+vbCritical, "Сортировка листов невозможна."<br>
 
-Exit Sub
+Exit Sub<br>
 
-End If
+End If<br>
 
 
 
-Set OldActive=ActiveSheet - присваивает переменной активный рабочий лист
+Set OldActive=ActiveSheet - присваивает переменной активный рабочий лист<br>
 
-OldActive.Activate - активизирует рабочий лист, который был изначально активным
+OldActive.Activate - активизирует рабочий лист, который был изначально активным<br>
 
 
 
-X =Len("Fox") 'результат =3
+X =Len("Fox") 'результат =3<br>
 
-Len - количество символов
+Len - количество символов<br>
 
 
 
-A Like "[ABC]" - Like ищет А в диапозоне, в данном случае True.
+A Like "[ABC]" - Like ищет А в диапозоне, в данном случае True.<br>
 
-Вариантов много, ищи в справке.
+Вариантов много, ищи в справке.<br>
 
 
 
-Mid(строка,начальная позиция, длина) - аналог пстр
+Mid(строка,начальная позиция, длина) - аналог пстр<br>
 
 
 
-Sub Test1()
+Sub Test1()<br>
 
-Dim x As Variant
+Dim x As Variant<br>
 
-x = InStr("На горе Фернандо-По, где гуляет Гиппо-по", "Фернандо")
+x = InStr("На горе Фернандо-По, где гуляет Гиппо-по", "Фернандо")<br>
 
-MsgBox x
+MsgBox x<br>
 
-'Здесь x будет равен 9
+'Здесь x будет равен 9<br>
 
-End Sub
+End Sub<br>
 
 
 
-Function RemoveVowels(qwe) As String
+Function RemoveVowels(qwe) As String<br>
 
-'Удаляет все гласные буквы из текста
+'Удаляет все гласные буквы из текста<br>
 
-Dim i As Long
+Dim i As Long<br>
 
-RemoveVowels = ""
+RemoveVowels = ""<br>
 
-For i = 1 To Len(qwe)
+For i = 1 To Len(qwe)<br>
 
-If Not UCase(Mid(qwe, i, 1)) Like "[AEIOUАЕОУЫЭЮЯ]" Then
+If Not UCase(Mid(qwe, i, 1)) Like "[AEIOUАЕОУЫЭЮЯ]" Then<br>
 
-RemoveVowels = RemoveVowels & Mid(qwe, i, 1)
+RemoveVowels = RemoveVowels & Mid(qwe, i, 1)<br>
 
-End If
+End If<br>
 
-Next i
+Next i<br>
 
-End Function
+End Function<br>
 
 
 
-Total = RemoveVowels (X) - вызов функции и передача аргумента Х. Функцию можно вызвать и без "тотал".
+Total = RemoveVowels (X) - вызов функции и передача аргумента Х. Функцию можно вызвать и без "тотал".<br>
 
 
 
-Asc (L) - возвращает номер символа
+Asc (L) - возвращает номер символа<br>
 
-Chr (23) - возвращает символ по номеру
+Chr (23) - возвращает символ по номеру<br>
 
-Application.Path - адрес к папке, где установлен Excel
+Application.Path - адрес к папке, где установлен Excel<br>
 
 
 
-Rnd() - возвращает случайное число между (1;0)
+Rnd() - возвращает случайное число между (1;0)<br>
 
 
 
-MsgBox "Ваше имя" &User() - пример вызова функции в макросе
+MsgBox "Ваше имя" &User() - пример вызова функции в макросе<br>
 
 
 
-Application.Volatile True - указывается в теле функции для более частого пересчёта
+Application.Volatile True - указывается в теле функции для более частого пересчёта<br>
 
 
 
-Select Case a
+Select Case a<br>
 
-Case 0 To 99
+Case 0 To 99<br>
 
-MsgBox ("DA")
+MsgBox ("DA")<br>
 
-End Select - проверка на вхождение в диапазон 0 to 99
+End Select - проверка на вхождение в диапазон 0 to 99<br>
 
 
 
-Function User(Optional Uppercase As Variant)
+Function User(Optional Uppercase As Variant)<br>
 
-If IsMissing(Uppercase) Then Uppercase = False
+If IsMissing(Uppercase) Then Uppercase = False<br>
 
-User = Application.UserName
+User = Application.UserName<br>
 
-If Uppercase Then User = UCase(User)
+If Uppercase Then User = UCase(User)<br>
 
-End Function
+End Function<br>
 
-Optional Uppercase As Variant - optional указывается перед необязательным аргументом, необязательный аргумент всегда последний
+Optional Uppercase As Variant - optional указывается перед необязательным аргументом, необязательный аргумент всегда последний<br>
 
 
 
-Function User(Optional Uppercase As Variant = true(или любое другое значение)) - = true это значение, которое присваевается переменной, по умолчанию, если она не определена (пуста)
+Function User(Optional Uppercase As Variant = true(или любое другое значение)) - = true это значение, которое присваевается переменной, по умолчанию, если она не определена (пуста)<br>
 
 
 
-Function MonthName()
+Function MonthName()<br>
 
-MonthName = Array("Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек")
+MonthName = Array("Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек")<br>
 
-End Function
+End Function<br>
 
-- Функция создаёт горизонтальный массив, вводится ctrl + shift + enter
+- Функция создаёт горизонтальный массив, вводится ctrl + shift + enter<br>
 
 
 
-(A+B) mod C - mod остаток от деления А+В на С
+(A+B) mod C - mod остаток от деления А+В на С<br>
 
 
 
-Чтобы получить ошибку #Н/Д в пользовательской функции, примените следующий оператор: Х = CVErr(xlErrNA)
+Чтобы получить ошибку #Н/Д в пользовательской функции, примените следующий оператор: Х = CVErr(xlErrNA)<br>
 
-xlErrDivO (для ошибки #ДЕЛ/ 0 !);
+xlErrDivO (для ошибки #ДЕЛ/ 0 !);<br>
 
-xlErrNA (для ошибки #Н/Д);
+xlErrNA (для ошибки #Н/Д);<br>
 
-xlErrName (для ошибки #ИМЯ?);
+xlErrName (для ошибки #ИМЯ?);<br>
 
-xlErrNull (для ошибки #ПУСТО !);
+xlErrNull (для ошибки #ПУСТО !);<br>
 
-xlErrNum (для ошибки #ЧИСЛО !);
+xlErrNum (для ошибки #ЧИСЛО !);<br>
 
-xlErrRef (для ошибки #ССЫЛ !);
+xlErrRef (для ошибки #ССЫЛ !);<br>
 
-xlErrValue (для ошибки #ЗНАЧ !).
+xlErrValue (для ошибки #ЗНАЧ !).<br>
 
  
 
-Вы можете присоединиться к нашей группе ВКонтакте: https://vk.com/vba_for_excel 
+Вы можете присоединиться к нашей группе ВКонтакте: https://vk.com/vba_for_excel <br>
 
-Для индексации: vba vba excel vba ячейка vba строки vba массивы vba функции 
+Для индексации: vba vba excel vba ячейка vba строки vba массивы vba функции <br>
 vk.com/vba_for_excel</p>
 
  </body>
